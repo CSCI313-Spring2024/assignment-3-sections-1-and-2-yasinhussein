@@ -1,23 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, Input } from '@angular/core';
+import { HousingLocation } from '../housinglocation';
 
-import { HousingLocationComponent } from './housing-location.component';
-
-describe('HousingLocationComponent', () => {
-  let component: HousingLocationComponent;
-  let fixture: ComponentFixture<HousingLocationComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [HousingLocationComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(HousingLocationComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+@Component({
+  selector: 'app-housing-location',
+  templateUrl: './housing-location.component.html',
+  styleUrls: ['./housing-location.component.css']
+})
+export class HousingLocationComponent {
+  @Input() housingLocation!: HousingLocation;
+}
