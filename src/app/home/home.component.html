@@ -5,7 +5,17 @@
   <section class="content">
     <app-home></app-home>
   </section>
-
+<section>
+  <form>
+    <input
+    class="form-control min d-inline-block m-3"
+    type="text"
+    placeholder="Filter by city"
+    aria-label="Filter by city"
+    style="width: 30%;"
+    />
+  </form>
+</section>
   <!-- HousingLocation Component being used here -->
   <section>
     <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
