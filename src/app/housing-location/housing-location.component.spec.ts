@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { HousingLocation } from '../housinglocation';
+import { CommonModule } from '@angular/common';
+import { HousingLocation } from '../housinglocation'; // Import the interface
 
 @Component({
   selector: 'app-housing-location',
@@ -7,5 +8,5 @@ import { HousingLocation } from '../housinglocation';
   styleUrls: ['./housing-location.component.css']
 })
 export class HousingLocationComponent {
-  @Input() housingLocation!: HousingLocation;
+  @Input() housingLocation!: HousingLocation; // Receive housingLocation from parent component
 }
