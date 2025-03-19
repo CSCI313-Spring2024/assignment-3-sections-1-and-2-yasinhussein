@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HousingLocation } from '../housinglocation';
 import { HousingLocationComponent } from '../housing-location/housing-location.component.spec';
+import { HousingService } from '../housing.service';
 
 
 @Component({
