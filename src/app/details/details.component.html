@@ -1,1 +1,16 @@
-<p>details works!</p>
+<article>
+    <img class="listing-photo" [src]="housingLocation?.photo" alt="{{ housingLocation?.name }}" />
+    <section>
+      <h2>{{ housingLocation?.name }}</h2>
+      <p>{{ housingLocation?.city }}, {{ housingLocation?.state }}</p>
+    </section>
+    <section>
+      <h2>About this housing location</h2>
+      <ul>
+        <li>Units available: {{ housingLocation?.availableUnits }}</li>
+        <li>Has WiFi: {{ housingLocation?.wifi }}</li>
+        <li>Has Laundry: {{ housingLocation?.laundry }}</li>
+      </ul>
+    </section>
+  </article>
+  
