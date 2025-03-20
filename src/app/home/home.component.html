@@ -1,0 +1,9 @@
+<form>
+  <input class="form-control m-3" type="text" placeholder="Filter by city" (input)="filterResults($event.target.value)" />
+</form>
+
+<section class="listing">
+  <ng-container *ngFor="let location of filteredLocationList">
+    <app-housing-location [housingLocation]="location"></app-housing-location>
+  </ng-container>
+</section>

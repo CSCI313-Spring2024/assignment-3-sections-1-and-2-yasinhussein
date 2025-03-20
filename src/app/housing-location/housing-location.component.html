@@ -1,0 +1,10 @@
+<section class="listing">
+  <ng-container *ngFor="let location of filteredLocationList; trackBy: trackById">
+    <div class="listing-card">
+      <img class="listing-photo" [src]="location.photo" alt="Exterior photo of {{ location.name }}" crossorigin />
+      <h5 class="listing-heading">{{ location.name }}</h5>
+      <p class="listing-location">{{ location.city }}, {{ location.state }}</p>
+      <a [routerLink]="['/details', location.id]">Learn More</a>
+    </div>
+  </ng-container>
+</section>
