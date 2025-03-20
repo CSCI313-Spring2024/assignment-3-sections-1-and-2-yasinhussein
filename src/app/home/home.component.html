@@ -1,38 +1,9 @@
-<main>
-  <header class="brand-name">
-    <img class="brand-logo" src="house-logo.png" alt="logo" aria-hidden="true" />
-  </header>ng
-  <section class="content">
-    <app-home></app-home>
-  </section>
-<section>
-  <form>
-    <input
-    class="form-control min d-inline-block m-3"
-    type="text"
-    placeholder="Filter by city"
-    aria-label="Filter by city"
-    style="width: 30%;"
-    />
-  </form>
-</section>
-  <!-- HousingLocation Component being used here -->
-  <section>
-    <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
-  </section>
+<form>
+  <input class="form-control m-3" type="text" placeholder="Filter by city" (input)="filterResults($event.target.value)" />
+</form>
 
-  <!-- Search form for city filtering -->
-  <section>
-    <form>
-      <input class="form-control min d-inline-block m-3" type="text" placeholder="Filter by city" aria-label="Filter by city" style="width: 30%" />
-      <button type="button" class="btn btn-primary">Search</button>
-    </form>
-  </section>
-  <section class="results">
-    @for (housingLocation of housingLocationList; track housingLocation){
-    <app-housing-location
-    [housingLocation]="housingLocation"
-    ></app-housing-location>
-    }
-   </section>
-</main>
+<section class="listing">
+  <ng-container *ngFor="let location of filteredLocationList">
+    <app-housing-location [housingLocation]="location"></app-housing-location>
+  </ng-container>
+</section>

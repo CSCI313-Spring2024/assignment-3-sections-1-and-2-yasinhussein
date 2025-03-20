@@ -12,4 +12,7 @@ import { RouterModule, RouterLink, RouterOutlet } from '@angular/router';
 
 export class HousingLocationComponent {
 
+  trackById(index: number, location: any): number {
+    return location.id;
+  }
 }

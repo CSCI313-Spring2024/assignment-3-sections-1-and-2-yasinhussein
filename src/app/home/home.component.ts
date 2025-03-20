@@ -6,9 +6,9 @@ import { HousingService } from '../housing.service';
 
 @Component({
   selector: 'app-home',
-  imports: [HousingLocationComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'],
+  imports: [HousingLocationComponent]
 })
 
 export class HomeComponent {
@@ -117,7 +117,7 @@ export class HomeComponent {
     laundry: true,
     },
     ];
-    constructor() {
+    constructor(private housingService: HousingService) {
       this.housingLocationList = this.housingService.getAllHousingLocations();
       this.filteredLocationList = this.housingLocationList;
     }
